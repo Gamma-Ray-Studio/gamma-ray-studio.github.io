@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>諮詢服務</title>
+    <title>技術服務</title>
 
     <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon" />
 
@@ -27,6 +27,34 @@
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
   </head>
   <body>
+     <!-- Messenger 洽談外掛程式 Code -->
+     <div id="fb-root"></div>
+
+     <!-- Your 洽談外掛程式 code -->
+     <div id="fb-customer-chat" class="fb-customerchat">
+     </div>
+ 
+     <script>
+       var chatbox = document.getElementById('fb-customer-chat');
+       chatbox.setAttribute("page_id", "113468783905350");
+       chatbox.setAttribute("attribution", "biz_inbox");
+ 
+       window.fbAsyncInit = function() {
+         FB.init({
+           xfbml            : true,
+           version          : 'v12.0'
+         });
+       };
+ 
+       (function(d, s, id) {
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) return;
+         js = d.createElement(s); js.id = id;
+         js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js';
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+     </script>
+     
     <header>
       <nav
         class="navbar navbar-expand-lg navbar-dark bg-dark"
@@ -90,7 +118,7 @@
                 Gamma Ray 軟體工作室
               </font>
             </h1>
-            <h2 style="color: white">程式技術 - 付費諮詢服務 【 FAQ 】</h2>
+            <h2 style="color: white">程式技術 - 支援服務 【 FAQ 】</h2>
           </div>
         </div>
         <div class="accordion" id="accordionPanelsStayOpenExample">
@@ -104,7 +132,7 @@
                 aria-expanded="true"
                 aria-controls="panelsStayOpen-collapseOne"
               >
-                <strong>什麼是技術諮詢 ?</strong>
+                <strong>程式家教 ?</strong>
               </button>
             </h2>
             <div
@@ -113,16 +141,15 @@
               aria-labelledby="panelsStayOpen-headingOne"
             >
               <div class="accordion-body bg-light text-dark">
-                簡單來說，就是<strong>短期的程式家教 ~</strong><br>
-                你可能本來就已經在學習程式的課程 或者 從事軟體開發的工作，<br>
+                <strong>對程式有興趣，不知道如何學起或者是想要更進一步，擁有完整的開發技能。</strong><br>
+                <strong>我可以作為你程式技術的領路人，交給你業界開發，實際上需要的技能樹 !</strong>
+                <br><br>
+                技能守備範圍: <br>
+                ➣ 前端開發 - Html、jQuery、Bootstrap、Vue <br>
+                ➣ 後端開發 - Spring Boot、Python Flask <br>
+                ➣ 程式設計 - Java、Python、Swift <br>
+                ➣ App 開發- iOS (Swift + SwiftUI)、Android (Java) <br>
                 <br>
-                但課業上的 <strong>專題、論文</strong>，或者工作上的 <strong>專案、產品</strong>，<br>
-                總是可能會遇到情境比較特殊、涵蓋範圍比較廣，不知道怎麼實作的狀況 。 <br>
-                <br>
-                這時候，如果還無人可問，那就真的<strong>壓力山大</strong> !<br>
-                <br>
-                因此，Gamma Ray 軟體工作室，藉由過往累積的多種技能經驗，提供一對一的諮詢服務，<br>
-                <strong>期望可以在最短時間內，解決你程式開發上的問題，並且獲得知識與技術的經驗提升。</strong><br>
               </div>
             </div>
           </div>
@@ -136,7 +163,7 @@
                 aria-expanded="false"
                 aria-controls="panelsStayOpen-collapseTwo"
               >
-                <strong>可以諮詢什麼內容?</strong>
+                <strong>專案諮詢 ?</strong>
               </button>
             </h2>
             <div
@@ -145,26 +172,19 @@
               aria-labelledby="panelsStayOpen-headingTwo"
             >
               <div class="accordion-body bg-light text-dark">
-                由於個人的技術儲備是有限的，以下是我的程式技能範圍 : <br />
-                <br />
-                ➣ 前端開發 - Html、jQuery、Bootstrap、Vue <br />
-                ➣ 後端開發 - Spring Boot、Python Flask <br />
-                ➣ 程式設計 - Java、Python、Swift <br />
-                ➣ App 開發- iOS (Swift + SwiftUI)、Android (Java) <br />
-                <br />
-                <strong>簡單來說，就是我會的東西 !</strong> <code>(偏實作類)</code><br />
-                如果是我不會的，例如: 校內課程或者是考卷解題，那就沒有辦法 ~
-                <br />
-                <br />
-                建議可以先參考我的<strong>履歷表、作品集、YouTube頻道</strong>，
-                <br />
-                判斷我有沒有機率可以解決，不然信件一來一回，也是個不小的時間成本。<br>
+                <strong>短期的程式家教 !</strong> <br>
+                你可能本來就已經在學習程式的課程 或者 從事軟體開發的工作。<br>
                 <br>
-                <nav class="blog-pagination" aria-label="Pagination">
+                <i>但課業上的 專題、論文，或者工作上的 專案、產品，</i> <br>
+                <i>總是可能會遇到情境比較特殊、涵蓋範圍比較廣，不知道怎麼實作的狀況。 </i><br>
+                <br>
+                <strong>我這邊可以邊寫、邊說明，專案中需要實作的部分，</strong><br>
+                <strong>除了會最短時間內，完成程式開發的項目，並且你也能從這個過程中，獲得知識與技術的經驗提升 ~</strong><br>
+                <!-- <nav class="blog-pagination" aria-label="Pagination">
                     <a class="btn btn-outline-primary" href="https://www.cakeresume.com/rhxs020">Cake Resume</a>
                     <a class="btn btn-outline-primary" href="https://gitlab.com/Enoxs/Portfolio/blob/master/README.md">Portfolio</a>
                     <a class="btn btn-outline-primary" href="https://www.youtube.com/user/rhxs020">YouTube</a>
-                </nav>
+                </nav> -->
                 <br />
               </div>
             </div>
@@ -172,14 +192,14 @@
           <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-headingThree">
               <button
-                class="accordion-button collapsed bg-secondary text-white"
+                class="accordion-button bg-secondary text-white"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#panelsStayOpen-collapseThree"
-                aria-expanded="false"
+                aria-expanded="true"
                 aria-controls="panelsStayOpen-collapseThree"
               >
-                <strong>如果我要諮詢，要怎麼做?</strong>
+                <strong>技術委託 ?</strong>
               </button>
             </h2>
             <div
@@ -188,19 +208,14 @@
               aria-labelledby="panelsStayOpen-headingThree"
             >
               <div class="accordion-body bg-light text-dark">
-                發送 e-mail 到這個信箱 : <br /><br />
-                <a
-                  class="btn btn-outline-primary mb-3 mb-sm-0"
-                  href="mailto:rhxs020@gmail.com"
-                  role="button"
-                  target="_blank"
-                  >rhxs020@gmail.com</a
-                >
-                <br /><br />
-                先跟我描述下，要諮詢的技術或需要協助的問題。 <br />
-                <br />
-                如果我熟悉的話，會再回覆聯繫方式，進一步的討論諮詢時間! <br />
-                <i>(當然，如果不會的話，也會告知超出能力範疇 ~)</i> <br />
+                有一些技術，雖然沒有實作過，但稍微研究一下，應該短時間內可以弄懂!<br>
+                <br>
+                <strong>例如 : Vue 3 技能的取得，就是因為委託而學習的。</strong><br>
+                <code>它實際上只需要具備 中階的 Html、JavaScript、CSS 技能，基本上都能夠很快掌握 !</code> <br>
+                <br>
+                若是在技能守備範圍稍微延伸一點的技術，委託我研究，<br>
+                身為技術流的軟體工程師，有興趣幫忙搞定 ! <br>
+                <br>
               </div>
             </div>
           </div>
@@ -214,7 +229,7 @@
                 aria-expanded="false"
                 aria-controls="panelsStayOpen-collapse04"
               >
-                <strong>收費方式如何 ?</strong>
+                <strong>如何聯繫?</strong>
               </button>
             </h2>
             <div
@@ -223,19 +238,22 @@
               aria-labelledby="panelsStayOpen-heading04"
             >
               <div class="accordion-body bg-light text-dark">
-                跟程式家教的科目定價一樣(每小時) : <br/><br>
-                <strong>➣ 網頁開發 - $600 <code>(TWD)</code></strong><br>
-                <strong>➣ Python 程式語言 - $600 <code>(TWD)</code></strong><br>
-                <strong>➣ Java 程式語言 - $750 <code>(TWD)</code></strong><br>
-                <strong>➣ Android App - $800 <code>(TWD)</code></strong><br>
-                <strong>➣ iOS App - $800 <code>(TWD)</code></strong><br>
-                <br>
-                特殊項目: <br>
-                <br>
-                <strong>➣ 特急件 - $1,200 <code>(TWD)</code></strong><br><br>
-                <i>項目的時程，非常的趕 !</i> <br>
-                <i>如果我熟悉這個技術的話，我可以直接幫你 Coding ~ </i><br>
-                <i>當然，有餘力，同樣會邊寫邊說明整體的開發思路與實作流程。</i>
+                發送 e-mail 到這個信箱或者使用 Facebook 的 Messenger 功能 : <br /><br>
+                <a
+                  class="btn btn-outline-primary mb-3 mb-sm-0"
+                  href="mailto:rhxs020@gmail.com"
+                  role="button"
+                  target="_blank"
+                  >rhxs020@gmail.com</a
+                >
+                <a
+                  class="btn btn-outline-primary mb-3 mb-sm-0"
+                  href="m.me/gammaray.studio"
+                  role="button"
+                  target="_blank"
+                  >Messenger</a
+                >
+                <br><br>
               </div>
             </div>
           </div>
@@ -249,7 +267,7 @@
                 aria-expanded="false"
                 aria-controls="panelsStayOpen-collapse05"
               >
-                <strong>那如果想要諮詢非技術類的呢 ?</strong>
+                <strong>收費方式 ?</strong>
               </button>
             </h2>
             <div
@@ -258,21 +276,19 @@
               aria-labelledby="panelsStayOpen-heading05"
             >
               <div class="accordion-body bg-light text-dark">
-                非技術類的 : <br>
+                <strong>「程式家教」各科目定價(每小時) : </strong><br/><br>
+                <strong>➣ 網頁開發 - $600 <code>(TWD)</code></strong><br>
+                <strong>➣ Python 程式語言 - $600 <code>(TWD)</code></strong><br>
+                <strong>➣ Java 程式語言 - $750 <code>(TWD)</code></strong><br>
+                <strong>➣ Android App - $800 <code>(TWD)</code></strong><br>
+                <strong>➣ iOS App - $800 <code>(TWD)</code></strong><br>
                 <br>
-                <strong>• 1 小時 - $300</strong><code>(TWD)</code>
-                <br>
-                <br>
-                如果是跟技術無關，只是想要找有程式專業的詢問， 例如:
-                職涯規劃、專案製作、課程學習等相關問題，
-                甚至任何非技術的問題，都可以詢問 ! <br>
-                <br>
-                不要忘記，我還是個<strong>精通孫子兵法，擅長紙上談兵的軟體工程師</strong> <code>(飽讀詩書，儲備許多知識!)</code>。<br>
-                即便是要回答感情問題，同樣也是可以引經據典，不過不保證可以回答得很好!
+                <strong>「專案諮詢」與「技術委託」，會依據項目與技術的花費時間與難易度，洽談後報價! </strong><br>
               </div>
             </div>
           </div>
         </div>
+        
         <footer class="pt-3 mt-4 text-muted border-top">
           <p class="float-end">
             April 30, 2021 by
@@ -282,6 +298,7 @@
         </footer>
       </div>
     </main>
+   
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

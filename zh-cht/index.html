@@ -35,8 +35,34 @@
 
     </style>
 </head>
-
 <body>
+     <!-- Messenger 洽談外掛程式 Code -->
+     <div id="fb-root"></div>
+     <!-- Your 洽談外掛程式 code -->
+     <div id="fb-customer-chat" class="fb-customerchat">
+     </div>
+ 
+     <script>
+       var chatbox = document.getElementById('fb-customer-chat');
+       chatbox.setAttribute("page_id", "113468783905350");
+       chatbox.setAttribute("attribution", "biz_inbox");
+ 
+       window.fbAsyncInit = function() {
+         FB.init({
+           xfbml            : true,
+           version          : 'v12.0'
+         });
+       };
+ 
+       (function(d, s, id) {
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) return;
+         js = d.createElement(s); js.id = id;
+         js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js';
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+     </script>
+
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
             <div class="container">
@@ -70,10 +96,9 @@
                         Gamma Ray 軟體工作室
                     </h1>
                     <p class="col-md-8 fs-4">
-                        程式開發者的技術工作坊 ! <br>
-                        我會在這邊: 開發程式、研究技術 與 思考人生~<br><br>
-                        這邊不是補習班、也不是工程師頻道。<br>
-                        是技術流的軟體工程師，炫技與展示才華的地方! 
+                        獨立開發者的技術工作坊 ~ <br>
+                        平台分享的內容，是工作室未來擴編時的技術儲備 !<br><br>
+                        目前工作室提供:程式家教、專案諮詢、技術委託和Coding支援的服務。<br>
                     </p>
                     <a class="btn btn-outline-primary btn-lg" href="https://www.youtube.com/user/rhxs020" role="button" target="_blank">
                         <img src="../assets/img/youtube.png" alt="" width="24" height="24">
@@ -106,7 +131,7 @@
                         </h2>
                         <p>
                             工作室已發佈的應用程式 ! <br>
-                            目前一個小願景，要創建 100 個應用程式，
+                            目前的小願景，要創建 100 個應用程式，
                             以及每個程式都是盡最大努力接近心目中 100 分的設計，所以命名為 100App+。
                         </p>
                         <a class="btn btn-outline-light btn-lg mb-3 mb-sm-0" href="100App+.html" role="button" target="_blank">
@@ -116,14 +141,14 @@
                 </div>
                 <div class="col-md-6">
                     <div class="h-100 p-5 text-white bg-dark border rounded-3">
-                        <h2 style="color: red;">諮詢服務</h2>
+                        <h2 style="color: red;">程式家教 / 專案諮詢 / 技術委託</h2>
                         <p>
-                            工作室提供 Java、Python、Web、Android、iOS ... 等，程式技術的諮詢服務，
-                            如果在課業上的專題、論文，或者是工作上的專案、產品，
-                            遇到不熟悉、不知道怎麼實作的問題，這邊提供一對一的付費諮詢。
+                            工作室提供 Java、Python、Web、Android、iOS ... 等，程式技術的支援服務。
+                            如果想要學習程式、專案實作卡關、委託技術研究。<br>
+                            身為技術流的軟體工程師，有興趣幫忙搞定 !
                         </p>
                         <a class="btn btn-outline-light btn-lg mb-3 mb-sm-0" href="consult-faq.html" role="button" target="_blank">
-                            我要諮詢
+                            技術服務
                         </a>
                     </div>
                 </div>
@@ -134,23 +159,32 @@
             <div class="row align-items-md-stretch">
                 <div class="col-md-6">
                     <div class="h-100 p-5 text-white bg-dark rounded-3">
-                        <h2 style="color: red;">開發經歷</h2>
+                        <h2 style="color: red;">Coding 支援</h2>
                         <p>
-                            我的工程師履歷，看看自述的技能: Java、Python、Web、iOS、Android，
-                            是不是真的會實作開發，還是半瓶水，響叮噹 ~
+                            人手不夠、技術不熟，需要臨時要找人 Coding ~ <br>
+                            如果規格明確、40 小時以內的開發量，工作室可以支援開發 !
                         </p>
-                        <a class="btn btn-outline-light btn-lg mb-3 mb-sm-0" href="https://www.cakeresume.com/rhxs020"" role="button" target="_blank">
-                            Cake Resume
+                        <!-- <a class="btn btn-outline-light btn-lg mb-3 mb-sm-0" href="#" role="button" target="_blank">
+                            如何支援 ?
+                        </a> -->
+                        <a class="btn btn-outline-light btn-lg mb-3 mb-sm-0" href="mailto:rhxs020@gmail.com" role="button" target="_blank">
+                            rhxs020@gmail.com
+                        </a>
+                        <a class="btn btn-outline-light btn-lg mb-3 mb-sm-0" href="m.me/gammaray.studio" role="button" target="_blank">
+                            Messenger
                         </a>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="h-100 p-5 text-white bg-dark border rounded-3">
-                        <h2 style="color: red;">作品集</h2>
+                        <h2 style="color: red;">開發經歷 / 作品集</h2>
                         <p>
-                            口說無憑，看作品集，有程式可以 Demo 比較準。
-                            過往的經歷圍繞在 iOT 系統的技能樹，十八般武藝的「架構師」是一個小目標。
+                            我的工程師 履歷 與 作品集 ! <br>
+                            過往的經歷圍繞在 iOT 的技能樹，十八般武藝的「架構師」是一個小目標。
                         </p>
+                        <a class="btn btn-outline-light btn-lg mb-3 mb-sm-0" href="https://www.cakeresume.com/rhxs020"" role="button" target="_blank">
+                            Cake Resume
+                        </a>
                         <a class="btn btn-outline-light btn-lg mb-3 mb-sm-0" href="https://gitlab.com/Enoxs/Portfolio/blob/master/README.md" role="button" target="_blank">
                             Portfolio
                         </a>
