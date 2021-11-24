@@ -35,8 +35,34 @@
 
     </style>
 </head>
-
 <body>
+     <!-- Messenger 洽談外掛程式 Code -->
+     <div id="fb-root"></div>
+     <!-- Your 洽談外掛程式 code -->
+     <div id="fb-customer-chat" class="fb-customerchat">
+     </div>
+ 
+     <script>
+       var chatbox = document.getElementById('fb-customer-chat');
+       chatbox.setAttribute("page_id", "113468783905350");
+       chatbox.setAttribute("attribution", "biz_inbox");
+ 
+       window.fbAsyncInit = function() {
+         FB.init({
+           xfbml            : true,
+           version          : 'v12.0'
+         });
+       };
+ 
+       (function(d, s, id) {
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) return;
+         js = d.createElement(s); js.id = id;
+         js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js';
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+     </script>
+
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
             <div class="container">
@@ -70,10 +96,9 @@
                         Gamma Ray 软体工作室
                     </h1>
                     <p class="col-md-8 fs-4">
-                        程式开发者的技术工作坊 ! <br>
-                        我会在这边: 开发程式、研究技术 与 思考人生~<br><br>
-                        这边不是补习班、也不是工程师频道。<br>
-                        是技术流的软体工程师，炫技与展示才华的地方! 
+                        独立开发者的技术工作坊 ~ <br>
+                        平台分享的内容，是工作室未来扩编时的技术储备 !<br><br>
+                        目前工作室提供:程式家教、专案谘询、技术委托和Coding支援的服务。<br>
                     </p>
                     <a class="btn btn-outline-primary btn-lg" href="https://www.youtube.com/user/rhxs020" role="button" target="_blank">
                         <img src="../assets/img/youtube.png" alt="" width="24" height="24">
@@ -116,14 +141,14 @@
                 </div>
                 <div class="col-md-6">
                     <div class="h-100 p-5 text-white bg-dark border rounded-3">
-                        <h2 style="color: red;">谘询服务</h2>
+                        <h2 style="color: red;">程式家教 / 专案谘询 / 技术委托</h2>
                         <p>
-                            工作室提供 Java、Python、Web、Android、iOS ... 等，程式技术的谘询服务，
-                            如果在课业上的专题、论文，或者是工作上的专案、产品，
-                            遇到不熟悉、不知道怎么实作的问题，这边提供一对一的付费谘询。
+                            工作室提供 Java、Python、Web、Android、iOS ... 等，程式技术的支援服务。
+                            如果想要学习程式、专案实作卡关、委托技术研究。<br>
+                            身为技术流的软体工程师，有兴趣帮忙搞定 !
                         </p>
                         <a class="btn btn-outline-light btn-lg mb-3 mb-sm-0" href="consult-faq.html" role="button" target="_blank">
-                            我要谘询
+                            技术服务
                         </a>
                     </div>
                 </div>
@@ -134,23 +159,26 @@
             <div class="row align-items-md-stretch">
                 <div class="col-md-6">
                     <div class="h-100 p-5 text-white bg-dark rounded-3">
-                        <h2 style="color: red;">开发经历</h2>
+                        <h2 style="color: red;">Coding 支援</h2>
                         <p>
-                            我的工程师履历，看看自述的技能: Java、Python、Web、iOS、Android，
-                            是不是真的会实作开发，还是半瓶水，响叮当 ~
+                            人手不够、技术不熟，需要临时要找人 Coding ~ <br>
+                            如果规格明确、40 小时以内的开发量，工作室可以支援开发 !
                         </p>
-                        <a class="btn btn-outline-light btn-lg mb-3 mb-sm-0" href="https://www.cakeresume.com/rhxs020"" role="button" target="_blank">
-                            Cake Resume
+                        <a class="btn btn-outline-light btn-lg mb-3 mb-sm-0" href="coding-support.html" role="button" target="_blank">
+                            如何支援 ?
                         </a>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="h-100 p-5 text-white bg-dark border rounded-3">
-                        <h2 style="color: red;">作品集</h2>
+                        <h2 style="color: red;">开发经历 / 作品集</h2>
                         <p>
-                            口说无凭，看作品集，有程式可以 Demo 比较准。
-                            过往的经历围绕在 iOT 系统的技能树，十八般武艺的“架构师”是一个小目标
+                            我的工程师 履历表 与 作品集 ! <br>
+                            过往的经历围绕在 iOT 的技能树，十八般武艺的「架构师」是一个小目标。
                         </p>
+                        <a class="btn btn-outline-light btn-lg mb-3 mb-sm-0" href="https://www.cakeresume.com/rhxs020"" role="button" target="_blank">
+                            Cake Resume
+                        </a>
                         <a class="btn btn-outline-light btn-lg mb-3 mb-sm-0" href="https://gitlab.com/Enoxs/Portfolio/blob/master/README.md" role="button" target="_blank">
                             Portfolio
                         </a>
